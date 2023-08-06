@@ -2,6 +2,16 @@ name: testing
 on: push
 
 jobs:
+    install-chrome:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+        - name: Set up Chrome
+          uses: browser-actions/setup-chrome@v1
+
+        - name: Print Chrome version
+          run: google-chrome --version
     test_projects:
         runs-on: ubuntu-latest
         steps:
