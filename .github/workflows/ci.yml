@@ -12,11 +12,9 @@ jobs:
 
         - name: Print Chrome version
           run: google-chrome --version
-    test_projects:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - name: Run page unit tests
-              run: |
-               pip install selenium
-               python3 tests.py
+          
+        - uses: actions/checkout@v3
+        - name: Run page unit tests
+          run: |
+            pip install selenium
+            python3 tests.py
