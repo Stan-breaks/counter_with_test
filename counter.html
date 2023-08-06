@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            var counter=0;
+          document.querySelector('#add').addEventListener('click',()=>{
+            counter+=1;
+            document.querySelector('h1').textContent=counter;
+          });
+          document.querySelector('#minus').addEventListener('click',()=>{
+            counter-=1;
+            document.querySelector('h1').textContent=counter;
+          });
+          
+        });
+    </script>
+</head>
+<body>
+    <h1>0</h1>
+    <button id="add">+</button>
+    <button id="minus">-</button>
+</body>
+</html>
